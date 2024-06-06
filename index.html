@@ -12,70 +12,74 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="./styles.css" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>Contact form</title>
   </head>
+
   <body>
-    <h1>Contact Us</h1>
+    <div class="contact-form-container">
+      <h1>Contact Us</h1>
+      <form class="contact-form">
+        <div>
+          <label for="first-name">First Name</label>
+          <div class="required" hidden>This field is required</div>
+          <input type="text" id="first-name" name="first-name" />
+        </div>
 
-    <div>
-      <div>First Name</div>
-      <div class="required">This field is required</div>
-    </div>
+        <div>
+          <label for="last-name">Last Name</label>
+          <div class="required" hidden>This field is required</div>
+          <input type="text" id="last-name" name="last-name" />
+        </div>
 
-    <div>
-      <div>Last Name</div>
-      <div class="required">This field is required</div>
-    </div>
+        <div>
+          <label for="email">Email Address</label>
+          <div class="error-email" hidden>
+            Please enter a valid email address
+          </div>
+          <div class="required" hidden>This field is required</div>
+          <input type="text" id="email" name="email" />
+        </div>
 
-    <div>
-      <div>Email Address</div>
-      <div class="error-email">Please enter a valid email address</div>
-      <div class="required">This field is required</div>
-    </div>
+        <div>
+          <label for="query-type">Query Type</label>
+          <div class="required" hidden>Please select a query type</div>
+          <select id="query-type" name="query-type">
+            <option value="general">General Enquiry</option>
+            <option value="support">Support Request</option>
+          </select>
+        </div>
 
-    <div>
-      <div>Query Type</div>
-      <div>General Enquiry</div>
-      <div>Support Request</div>
-      <div class="required">Please select a query type</div>
-    </div>
+        <div>
+          <label for="message">Message</label>
+          <div class="required" hidden>This field is required</div>
+          <textarea name="message" id="message" rows="4"></textarea>
+        </div>
 
-    <div>
-      <div>Message</div>
-      <div class="required">This field is required</div>
-    </div>
+        <div>
+          <label>
+            <input type="checkbox" id="consent" name="consent" />
+            I consent to being contacted by the team.
+          </label>
+          <div class="required" hidden>consent to being contacted</div>
+        </div>
 
-    <div>
-      <div>
-        I consent to being contacted by the team To submit this form, please
+        <button>Submit</button>
+
+        <div hidden>
+          Message Sent! Thanks for completing the form. We'll be in touch soon!
+        </div>
+      </form>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.linkedin.com/in/lucas-pereira-da-silva-unb/"
+          >Lucas Pereira da Silva</a
+        >.
       </div>
-      <div class="required">consent to being contacted</div>
-    </div>
-
-    <button>Submit</button>
-
-    <div>
-      Message Sent! Thanks for completing the form. We'll be in touch soon!
-    </div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by
-      <a href="https://www.linkedin.com/in/lucas-pereira-da-silva-unb/"
-        >Lucas Pereira da Silva</a
-      >.
     </div>
     <script src="./script.js"></script>
   </body>
