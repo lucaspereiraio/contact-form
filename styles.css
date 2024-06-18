@@ -1,3 +1,76 @@
+/* Definindo a fonte Regular */
+@font-face {
+  font-family: "MyFont";
+  src: url("./assets/fonts/static/Karla-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Definindo a fonte Bold */
+@font-face {
+  font-family: "MyFont";
+  src: url("./assets/fonts/static/Karla-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: hsl(148, 38%, 91%);
+  margin: 0 auto;
+  font-family: MyFont, sans-serif;
+  font-size: 16px;
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  width: 80%;
+  max-width: 100%;
+  border-radius: 5%;
+  margin: 5%;
+  padding: 5%;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  gap: 10rem;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.form-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#query-type {
+  font-family: MyFont, sans-serif;
+}
+
+/* .name {
+  display: flex;
+} */
+
+.submit-button {
+  width: 100%;
+  height: 3rem;
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.5rem;
+  font-family: MyFont, sans-serif;
+  font-size: 1rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

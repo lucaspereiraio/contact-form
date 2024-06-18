@@ -18,31 +18,34 @@
 
   <body>
     <div class="contact-form-container">
-      <h1>Contact Us</h1>
+      <div class="title">
+        <h1>Contact Us</h1>
+      </div>
       <form id="contact-form">
-        <div>
-          <label for="first-name">First Name</label>
-          <div class="required" hidden>This field is required</div>
-          <input
-            type="text"
-            id="first-name"
-            name="first-name"
-            autocomplete="given-name"
-          />
+        <div class="form-name">
+          <div class="form-input">
+            <label for="first-name">First Name</label>
+            <div class="required" hidden>This field is required</div>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              autocomplete="given-name"
+            />
+          </div>
+          <div class="form-input">
+            <label for="last-name">Last Name</label>
+            <div class="required" hidden>This field is required</div>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              autocomplete="family-name"
+            />
+          </div>
         </div>
 
-        <div>
-          <label for="last-name">Last Name</label>
-          <div class="required" hidden>This field is required</div>
-          <input
-            type="text"
-            id="last-name"
-            name="last-name"
-            autocomplete="family-name"
-          />
-        </div>
-
-        <div>
+        <div class="form-input">
           <label for="email">Email Address</label>
           <div class="error-email" hidden>
             Please enter a valid email address
@@ -51,7 +54,7 @@
           <input type="text" id="email" name="email" autocomplete="email" />
         </div>
 
-        <div>
+        <div class="form-input">
           <label for="query-type">Query Type</label>
           <div class="required" hidden>Please select a query type</div>
           <select id="query-type" name="query-type" autocomplete="off">
@@ -60,7 +63,7 @@
           </select>
         </div>
 
-        <div>
+        <div class="form-input">
           <label for="message">Message</label>
           <div class="required" hidden>This field is required</div>
           <textarea
@@ -71,7 +74,7 @@
           ></textarea>
         </div>
 
-        <div>
+        <div class="form-input">
           <label>
             <input
               type="checkbox"
@@ -84,7 +87,7 @@
           <div class="required" hidden>consent to being contacted</div>
         </div>
 
-        <button>Submit</button>
+        <div class="submit"><button class="submit-button">Submit</button></div>
 
         <div class="success-message" style="display: none">
           Message Sent! Thanks for completing the form. We'll be in touch soon!
