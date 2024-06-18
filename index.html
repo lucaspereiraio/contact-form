@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -20,17 +19,27 @@
   <body>
     <div class="contact-form-container">
       <h1>Contact Us</h1>
-      <form class="contact-form">
+      <form id="contact-form">
         <div>
           <label for="first-name">First Name</label>
           <div class="required" hidden>This field is required</div>
-          <input type="text" id="first-name" name="first-name" />
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            autocomplete="given-name"
+          />
         </div>
 
         <div>
           <label for="last-name">Last Name</label>
           <div class="required" hidden>This field is required</div>
-          <input type="text" id="last-name" name="last-name" />
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            autocomplete="family-name"
+          />
         </div>
 
         <div>
@@ -39,13 +48,13 @@
             Please enter a valid email address
           </div>
           <div class="required" hidden>This field is required</div>
-          <input type="text" id="email" name="email" />
+          <input type="text" id="email" name="email" autocomplete="email" />
         </div>
 
         <div>
           <label for="query-type">Query Type</label>
           <div class="required" hidden>Please select a query type</div>
-          <select id="query-type" name="query-type">
+          <select id="query-type" name="query-type" autocomplete="off">
             <option value="general">General Enquiry</option>
             <option value="support">Support Request</option>
           </select>
@@ -54,12 +63,22 @@
         <div>
           <label for="message">Message</label>
           <div class="required" hidden>This field is required</div>
-          <textarea name="message" id="message" rows="4"></textarea>
+          <textarea
+            name="message"
+            id="message"
+            rows="4"
+            autocomplete="off"
+          ></textarea>
         </div>
 
         <div>
           <label>
-            <input type="checkbox" id="consent" name="consent" />
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              autocomplete="off"
+            />
             I consent to being contacted by the team.
           </label>
           <div class="required" hidden>consent to being contacted</div>
@@ -67,7 +86,7 @@
 
         <button>Submit</button>
 
-        <div hidden>
+        <div class="success-message" style="display: none">
           Message Sent! Thanks for completing the form. We'll be in touch soon!
         </div>
       </form>
