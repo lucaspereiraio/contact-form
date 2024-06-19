@@ -32,10 +32,12 @@ body {
   padding: 5%;
 }
 
-.contact-form {
-  width: 100%;
+#contact-form {
   display: flex;
-  gap: 10rem;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  gap: 2rem;
 }
 
 .title {
@@ -45,11 +47,36 @@ body {
 .form-name {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+}
+
+#first-name,
+#last-name,
+#email,
+#query-type,
+#message {
+  border-radius: 0.3rem;
+  border-width: 0.7rem;
+  height: 2rem;
+  /* border-color: black; */
+}
+
+#first-name,
+#last-name,
+#email,
+#query-type,
+#message :hover {
+  /* border-color: hsl(186, 15%, 59%); */
+}
+
+#message {
+  height: 6rem;
 }
 
 .form-input {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
 #query-type {
@@ -71,10 +98,6 @@ body {
   font-size: 1rem;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+#submit-button :hover {
+  background-color: hsl(187, 24%, 22%);
 }
