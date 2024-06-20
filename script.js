@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   let contactForm = document.getElementById("contact-form");
 
+  // Check if the form was successfully submitted in the session storage
+  if (sessionStorage.getItem("formSubmitted") === "true") {
+    displaySuccessMessage();
+    sessionStorage.removeItem("formSubmitted"); // Remove the flag after displaying the message
+  }
+
   contactForm.addEventListener("submit", function (event) {
     let isValid = true;
 
@@ -44,6 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
       isValid = false;
     }
 
+    // Validate Query Type
+
+    let queryTypeChecked = document.querySelector(
+      'input[name="query-type"]:checked'
+    );
+
+    if (!queryTypeChecked) {
+      document.querySelector(".required-query-type").style.display = "block";
+      document.querySelector(".required-query-type").style.color = "red";
+      isValid = false;
+    }
+
     // Validate Message
     let message = document.getElementById("message").value;
 
@@ -67,9 +85,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isValid) {
       event.preventDefault();
     } else {
-      document.querySelector(".success-message").style.display = "block";
-      document.querySelector(".success-message").style.color =
-        "hsl(169, 82%, 27%)";
+      sessionStorage.setItem("formSubmitted", "true");
+      displaySuccessMessage();
     }
   });
+
+  function displaySuccessMessage() {
+    document.querySelector(".success-message").style.display = "block";
+    document.querySelector(".success-message").style.color =
+      "hsl(169, 82%, 27%)";
+  }
 });
