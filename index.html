@@ -57,10 +57,18 @@
         <div class="form-input">
           <label for="query-type">Query Type</label>
           <div class="required" hidden>Please select a query type</div>
-          <select id="query-type" name="query-type" autocomplete="off">
-            <option value="general">General Enquiry</option>
-            <option value="support">Support Request</option>
-          </select>
+          <div class="radio-group">
+            <label class="custom-radio">
+              <input type="radio" name="query-type" value="general" />
+              <span class="radio-button"></span>
+              General Enquiry
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="query-type" value="support" />
+              <span class="radio-button"></span>
+              Support Request
+            </label>
+          </div>
         </div>
 
         <div class="form-input">
@@ -87,7 +95,9 @@
           <div class="required" hidden>consent to being contacted</div>
         </div>
 
-        <div class="submit"><button class="submit-button">Submit</button></div>
+        <div class="submit">
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
 
         <div class="success-message" style="display: none">
           Message Sent! Thanks for completing the form. We'll be in touch soon!
