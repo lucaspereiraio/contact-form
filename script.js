@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let firstName = document.getElementById("first-name").value;
 
     if (!firstName) {
-      alert("First Name field is required.");
+      document.querySelector(".required-first-name").style.display = "block";
+      document.querySelector(".required-first-name").style.color = "red";
+      document.querySelector("#first-name").style.borderColor = "red";
       isValid = false;
     }
 
@@ -16,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let lastName = document.getElementById("last-name").value;
 
     if (!lastName) {
-      alert("Last Name field is required.");
+      document.querySelector(".required-last-name").style.display = "block";
+      document.querySelector(".required-last-name").style.color = "red";
+      document.querySelector("#last-name").style.borderColor = "red";
       isValid = false;
     }
 
@@ -29,10 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let email = document.getElementById("email").value;
 
     if (!email) {
-      alert("Email field is required");
+      document.querySelector(".required-email").style.display = "block";
+      document.querySelector(".required-email").style.color = "red";
+      document.querySelector("#email").style.borderColor = "red";
       isValid = false;
     } else if (!validateEmail(email)) {
-      alert("Please enter a valid email address.");
+      document.querySelector(".required-email").style.display = "block";
+      document.querySelector(".required-email").style.color = "red";
+      document.querySelector("#email").style.borderColor = "red";
       isValid = false;
     }
 
@@ -40,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let message = document.getElementById("message").value;
 
     if (!message) {
-      alert("Message field is required");
+      document.querySelector(".required-message").style.display = "block";
+      document.querySelector(".required-message").style.color = "red";
+      document.querySelector("#message").style.borderColor = "red";
       isValid = false;
     }
 
@@ -48,15 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
     let consent = document.getElementById("consent").checked;
 
     if (!consent) {
-      alert("To submit this form, please consent to being contacted.");
+      document.querySelector(".required-consent").style.display = "block";
+      document.querySelector(".required-consent").style.color = "red";
       isValid = false;
     }
 
-    //Final validation -> NAO TA FUNCIONANDO
+    //Final validation
     if (!isValid) {
       event.preventDefault();
     } else {
       document.querySelector(".success-message").style.display = "block";
+      document.querySelector(".success-message").style.color =
+        "hsl(169, 82%, 27%)";
     }
   });
 });

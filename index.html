@@ -25,38 +25,40 @@
         <div class="form-name">
           <div class="form-input">
             <label for="first-name">First Name</label>
-            <div class="required" hidden>This field is required</div>
             <input
               type="text"
               id="first-name"
               name="first-name"
               autocomplete="given-name"
             />
+            <div class="required-first-name" style="display: none">
+              This field is required
+            </div>
           </div>
           <div class="form-input">
             <label for="last-name">Last Name</label>
-            <div class="required" hidden>This field is required</div>
             <input
               type="text"
               id="last-name"
               name="last-name"
               autocomplete="family-name"
             />
+            <div class="required-last-name" style="display: none">
+              This field is required
+            </div>
           </div>
         </div>
 
         <div class="form-input">
           <label for="email">Email Address</label>
-          <div class="error-email" hidden>
+          <input type="text" id="email" name="email" autocomplete="email" />
+          <div class="required-email" style="display: none">
             Please enter a valid email address
           </div>
-          <div class="required" hidden>This field is required</div>
-          <input type="text" id="email" name="email" autocomplete="email" />
         </div>
 
         <div class="form-input">
           <label for="query-type">Query Type</label>
-          <div class="required" hidden>Please select a query type</div>
           <div class="radio-group">
             <label class="custom-radio">
               <input type="radio" name="query-type" value="general" />
@@ -68,18 +70,23 @@
               <span class="radio-button"></span>
               Support Request
             </label>
+            <div class="required-query-type" style="display: none">
+              Please select a query type
+            </div>
           </div>
         </div>
 
         <div class="form-input">
           <label for="message">Message</label>
-          <div class="required" hidden>This field is required</div>
           <textarea
             name="message"
             id="message"
             rows="4"
             autocomplete="off"
           ></textarea>
+          <div class="required-message" style="display: none">
+            This field is required
+          </div>
         </div>
 
         <div class="form-input">
@@ -92,7 +99,9 @@
             />
             I consent to being contacted by the team.
           </label>
-          <div class="required" hidden>consent to being contacted</div>
+          <div class="required-consent" style="display: none">
+            To submit this form, please consent to being contacted!
+          </div>
         </div>
 
         <div class="submit">
