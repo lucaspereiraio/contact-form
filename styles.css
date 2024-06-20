@@ -56,17 +56,18 @@ body {
 #query-type,
 #message {
   border-radius: 0.3rem;
-  border-width: 0.7rem;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: black;
   height: 2rem;
-  /* border-color: black; */
 }
 
-#first-name,
-#last-name,
-#email,
-#query-type,
-#message :hover {
-  /* border-color: hsl(186, 15%, 59%); */
+#first-name:hover,
+#last-name:hover,
+#email:hover,
+#query-type:hover,
+#message:hover {
+  border-color: hsl(186, 15%, 59%);
 }
 
 #message {
